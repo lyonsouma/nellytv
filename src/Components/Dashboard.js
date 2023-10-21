@@ -6,6 +6,7 @@ import { Link as ScrollLink } from 'react-scroll';
 
 
 const Dashboard = () => {
+    
     return (
         <div className="container-fluid">
             <div className='row nav-container'>
@@ -80,7 +81,7 @@ const Dashboard = () => {
                     </div>
                 </section>
 
-                <section id="about-us" className='bg-info mt-5'>
+                <section id="about-us" className='mt-5'>
                     <div className="container">
                         <h3>About Us</h3>
                         <p>At [Your Studio Name], we're passionate about bringing your vision to life through the power of visual storytelling. With a focus on video production, live streaming, audio recording, and photography, we've been serving clients with professionalism and creativity for [X] years.</p>
@@ -125,10 +126,15 @@ const Dashboard = () => {
                     <h1>Service</h1>
                     </div>
                 </section>
-                <section id="contact" className='bg-danger mt-5'>
-                    <div className="container">
-                    <h1>Contact</h1>
-                    </div>
+                <section id="contact" className='contact mt-5'>
+                      <div className='container-fluid'>
+                        <h3 className='class-brand'>Contact</h3>
+                        <div className=' container-fluid row'>
+                            <div className='col text-danger'><input placeholder='Name...'/></div>
+                            <div className='col text-danger'><input placeholder='Phone...'/></div>
+                            <div className='col text-danger'><input placeholder='Email...'/></div>
+                        </div>
+                      </div>
                 </section>
             </div>
         </div>
