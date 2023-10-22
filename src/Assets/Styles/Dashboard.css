@@ -16,7 +16,7 @@
 }
 .nav-link {
     text-decoration: none;
-    color: #14e509;
+    color: #00ccff;
     margin: 7px 30px; /* Added space on the left and right */
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #14e509; /* White line color */
+    background-color: #00ccff; /* White line color */
     bottom: 0;
     left: 0;
     transition: width 0.3s ease;
@@ -42,14 +42,18 @@
     color: #ffffff;
   }
 
-.home-container {
-    background-size: cover;
+  .home-container {
+    background: url(/src/Assets/Images/Toto.jpg);
+    background-size: cover;  /* Adjusted to "cover" */
+    background-repeat: no-repeat;  /* Added to prevent repeating */
     height: 100vh;
     width: 100%;
     position: relative;
     animation: slide 100s infinite;
     background-position: 100% center;
 }
+
+
 
 .home-container::after {
     content: '';
@@ -61,17 +65,17 @@
     background: rgba(0, 0, 0, 0.6); 
 }
 
-@keyframes slide {
+/* @keyframes slide {
      
-    00% {
+    0% {
         background-position: 0% center;
-        background-image: url(/src/Assets/Images/laptop.jpg);
+        background-image: url(/src/Assets/Images/Toto.jpg);
        
     }
 
     20% {
         background-position: 0% center;
-        background-image: url(/src/Assets/Images/n2.jpg);
+        background-image: url(/src/Assets/Images/ttt2.jpg);
     }
     40% {
         background-position: 0% center;
@@ -79,7 +83,7 @@
     }
     60% {
         background-position: 0% center;
-        background-image: url(/src/Assets/Images/n4.jpg);
+        background-image: url(/src/Assets/Images/n2.jpg);
     }
     80% {
         background-position: 0% center;
@@ -89,9 +93,9 @@
         background-position: 0% center;
         background-image: url(/src/Assets/Images/SS1.jpg);
     }
-}
+} */
 
 .phone-contact{
-    color: #14e509;
+    color:#00ccff;
     align-items: center;
 }

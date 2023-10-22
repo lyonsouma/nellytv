@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Logo from '../Assets/Images/logoz.png';
+import Logo from '../Assets/Images/logos.png';
 import '../Assets/Styles/Dashboard.css';
 import { Link as ScrollLink } from 'react-scroll';
 import { FaPhoneVolume} from "react-icons/fa6";
@@ -84,7 +84,7 @@ const Dashboard = () => {
                   </ScrollLink>
                 </li>
               </ul>
-                <h6 className='phone-contact'><FaPhoneVolume className='mx-2'/>+254111689847</h6>
+                <h6 className='phone-contact'><FaPhoneVolume className='mx-2'/>+2 541 116 89 847</h6>
             </div>
 
           </div>
@@ -93,7 +93,7 @@ const Dashboard = () => {
       <div className='row'>
         <section id='home' className='home-container'>
           <div className="container-fluid">
-            {/* Your Home content */}
+            
           </div>
         </section>
 
