@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Logo from '../Assets/Images/logos.png';
 import '../Assets/Styles/Dashboard.css';
 import { Link as ScrollLink } from 'react-scroll';
-import { FaPhoneVolume} from "react-icons/fa6";
+import { FaPhoneVolume, FaLocationDot} from "react-icons/fa6";
 
 const Dashboard = () => {
   const [showLinks, setShowLinks] = useState(window.innerWidth >= 992); // Initially show links on larger screens
@@ -104,16 +104,37 @@ const Dashboard = () => {
           </div>
         </section>
 
-        <section id="service" className='bg-warning mt-5'>
+        <section id="service" className='mt-5'>
           <div className="container">
             <h1>Service</h1>
             {/* Your Service content */}
           </div>
         </section>
+
         <section id="contact" className='contact mt-5'>
           <div className='container-fluid'>
-            <h1>Contact</h1>
-            {/* Your Contact content */}
+            <h3 className='text-center text-light mt-5'>Contact</h3>
+
+            <hr className='text-light mt-5'/>
+
+            <div className='mt-2 text-center text-light'>
+                <p><FaLocationDot/></p>
+                <p>Nakuru, Kenya</p>
+                <p>+254111689847</p>
+                <p>E-mail: adembanelson@gmail.com</p>
+            </div>
+
+            <div className='container mt-5'>
+              <input className='col-lg-4 mx-2' type='text' placeholder='Name'/>
+              <input className='col-lg-4 mx-2' placeholder='Phone'/>
+              <input className='col-lg-3 mx-2' type='email' placeholder='Email'/>
+            </div>
+
+            <textarea className='container form-control mt-5' placeholder='Message'/>
+
+            <div className='mt-5 text-center'>
+              <button className='btn'>Send</button>
+            </div>
           </div>
         </section>
       </div>
