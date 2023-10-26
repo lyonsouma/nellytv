@@ -55,7 +55,7 @@ function Gallery() {
         }}>
             <button onClick={()=> imgAction()} style={{position: 'absolute', top: '10px' ,right: '10px'}}>X</button>
             <button onClick={() => imgAction('previous-img')}>Previous</button>
-            <img src={data.img} style={{width: 'auto', maxWidth: '90%', maxHeight: '90%'}}/>
+            <img src={data.img} style={{width: 'auto', height: '90vh', maxHeight: '90%', objectFit: 'contain'}}/>
             <button onClick={() => imgAction('next-img')}>Next</button>
         </div>
     }
@@ -65,15 +65,13 @@ function Gallery() {
            >
             <Masonry gutter="20px">
             {images.map((image, i) => (
-                <img
-                key={i}
-                src={image}
-                style={{width: '100%', display: "block", cursor: 'pointer'}}
-                alt=""
-                onClick= {()=>viewImage(image, i)}
-          
-                />
-                
+                <div key={i} style={{width: '100%', display: "block", cursor: 'pointer', height: '100%'}} onClick= {()=>viewImage(image, i)}>
+                  <img
+                    src={image}
+                    style={{width: '100%', height: '100%', objectFit: 'cover'}}
+                    alt=""
+                  />
+                </div>
             ))}
             </Masonry>
         </ResponsiveMasonry>
