@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import m8 from '../Assets/Images/n11.jpg';
+import m9 from '../Assets/Images/n12.jpg';
 import m1 from '../Assets/Images/m1.jpg'; 
 import m2 from '../Assets/Images/m2.jpg'; 
 import m3 from '../Assets/Images/m3.jpg'; 
@@ -8,8 +10,12 @@ import m5 from '../Assets/Images/m5.jpg';
 import m6 from '../Assets/Images/m6.jpg'; 
 import m7 from '../Assets/Images/m7.jpg'; 
 
+
+
 function Gallery() {
   const images = [
+    m8,
+    m9,
     m1,
     m2,
     m3,
@@ -17,6 +23,7 @@ function Gallery() {
     m5,
     m6,
     m7,
+  
   ];
 
   const [data, setData] = useState({ img: "", i: 0 });

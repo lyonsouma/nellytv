@@ -88,16 +88,14 @@ const Dashboard = () => {
 </section>
 
 
-        <section id="about-us" className="mt-5">
+        <section id="about-us" className="mt-5 bg-light ">
           <div className="container">
             <h3>About Us</h3>
-            {/* Your About Us content */}
           </div>
         </section>
 
         <section id="service" className="mt-5">
           <Service/>
-         
         </section>
 
         <section id="contact" className="contact mt-5">
