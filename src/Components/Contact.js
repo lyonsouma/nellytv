@@ -9,32 +9,42 @@ const Contact = () => {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [msg, setMsg] = useState('');
+  const [successMessage, setSuccessMessage] = useState(''); 
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .send(
-        'service_wiqxfyd', // Replace with your service ID
-        'template_hg4xvsh', // Replace with your template ID
+        'service_wiqxfyd', //  service ID
+        'template_hg4xvsh', //  template ID
         {
-          to_name: 'oumalyons26@gmail.com', // Replace with your recipient email
+          to_name: 'oumalyons26@gmail.com', //  recipient email
           from_name: email,
           message: `Name: ${name}<br/> Phone No: ${phone}<br/> Email: ${email}<br/> Message: ${msg}`,
         },
-        'GVZj4Ayj3-6vbPyeB' // Replace with your user ID
+        'GVZj4Ayj3-6vbPyeB' // user ID
       )
       .then((response) => {
         console.log('Email sent:', response);
+ 
+        setName('');
+        setPhone('');
+        setEmail('');
+        setMsg('');
+
+        setSuccessMessage('Email sent successfully');
+
+       
+        setTimeout(() => {
+          setSuccessMessage('');
+        }, 5000); 
       })
       .catch((error) => {
         console.error('Email could not be sent:', error);
       });
   };
 
-  // setName('');
-  // setPhone('');
-  // setEmail('');
   return (
     <div className="container text-center content">
       <h3 className="text-center text-light mt-5">Contact</h3>
@@ -46,6 +56,9 @@ const Contact = () => {
         <p>+254111689847</p>
         <p>E-mail: adembanelson@gmail.com</p>
       </div>
+      {successMessage && (
+        <div style={{color:'yellowgreen'}}>{successMessage}</div>
+      )}
       <form onSubmit={sendEmail} className="mt-4">
         <div className="row">
           <div className="col-lg-4 col-md-4 col-sm-12 mb-3">
@@ -55,6 +68,7 @@ const Contact = () => {
               placeholder="Your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required={true}
             />
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12 mb-3">
@@ -64,6 +78,7 @@ const Contact = () => {
               placeholder="Your contact"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
+              required={true}
             />
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12 mb-3">
@@ -73,6 +88,7 @@ const Contact = () => {
               placeholder="Your mail"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required={true}
             />
           </div>
         </div>
@@ -84,15 +100,19 @@ const Contact = () => {
               placeholder="Message"
               value={msg}
               onChange={(e) => setMsg(e.target.value)}
+              required={true}
             ></textarea>
           </div>
         </div>
         <div className="text-center mt-3">
-          <button type="submit" className="btn">
+          <button type="submit" className="btn mb-5">
             Send
           </button>
         </div>
       </form>
+
+     
+
     </div>
   );
 };

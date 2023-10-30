@@ -5,6 +5,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import { FaPhoneVolume } from 'react-icons/fa6';
 import Contact from './Contact';
 import Service from './Service';
+import lyons from '../Assets/Images/ly.jpg'
 
 const Dashboard = () => {
   const [showLinks, setShowLinks] = useState(window.innerWidth >= 992); // Initially show links on larger screens
@@ -75,22 +76,26 @@ const Dashboard = () => {
     </div>
     <div className="row">
       <div className="col-md-12">
-        <ul className="text-center text-light animtext">
-          <li className='text-info'>Here we offer:</li>
-          <li className='text-info'>Photography,</li>
-          <li className='text-info'>Videography,</li>
-          <li className='text-info'>Live streaming</li>
-          <li className='text-info'>and more...</li>
-        </ul>
+        <p className="text-center text-info">
+          Here we offer: Photography, Videography, Live streaming and more...
+        </p>
       </div>
     </div>
   </div>
 </section>
 
 
-        <section id="about-us" className="mt-5 bg-light ">
-          <div className="container">
-            <h3>About Us</h3>
+        <section id="about-us" className="container-fluid mt-5 bg-light " style={{position: "relative"}}>
+          <div className="row">
+            <h3 className='mt-1 text-info'>About Us</h3>
+            <div className='container col-lg-8 col-md-7 col-sm-6 bg-light'>
+              <p className='mt-5'> 
+              NellyTV Recording, Livestreaming, and Shooting Studio is a state-of-the-art multimedia production facility dedicated to creating high-quality video content. With cutting-edge technology and a team of experienced professionals, NellyTV offers comprehensive services for recording, livestreaming, and shooting. Whether it's capturing live events, producing engaging video content, or broadcasting in real-time, NellyTV Studio is your one-stop destination for all your multimedia needs. Their commitment to excellence and creativity ensures that your vision is brought to life with stunning visuals and audio quality, making them a go-to choice for a wide range of projects, from music videos and corporate events to live broadcasts and much more.
+              </p>
+            </div>
+            <div className='col-lg-4 col-md-3 col-sm-2 bg-light'>
+              <img className='about-img' src={lyons} alt='image' />
+            </div>
           </div>
         </section>
 

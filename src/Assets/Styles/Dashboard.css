@@ -74,76 +74,7 @@
     position: relative;
     opacity: 0.7;
 }
-.animtext {
-    color: #b62929;
-    font-family: "Arial", sans-serif;
-    font-size: 2em;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-    animation: animtext 16s steps(80) infinite;
-    transition: all cubic-bezier(0.1, 0.7, 1.0, 0.1);
-    z-index: 3;
-    opacity: 0.7;
-  }
-  
-  @keyframes animtext {
-    0%, 15% {
-      width: 0;
-    }
-    20%, 35% {
-      width: 0;
-    }
-    40%, 55% {
-      width: 100%;
-    }
-    60%, 75% {
-      width: 100%;
-    }
-    80%, 95% {
-      width: 0;
-    }
-  }
-  
 
-  
-  .animtext li {
-    display: inline-block;
-    padding: 0 10px;
-    opacity: 0;
-    animation: fadeIn 4s forwards;
-  }
-  
-
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .animtext li:nth-child(1) {
-    animation-delay: 4s;
-  }
-  
-  .animtext li:nth-child(2) {
-    animation-delay: 8s;
-  }
-  
-  .animtext li:nth-child(3) {
-    animation-delay: 12s;
-  }
-  
-  .animtext li:nth-child(4) {
-    animation-delay: 16s;
-  }
-  
 
 /* @keyframes slide {
      
@@ -174,10 +105,10 @@
         background-image: url(/src/Assets/Images/SS1.jpg);
     }
 } */
-h1 {
+/* h2 {
     color: #ffffff;
     font-family: "arial";
-    font-size: 3em;
+    font-size: 1em;
     margin: 10px 0 0 10px;
     white-space: nowrap;
     overflow: hidden;
@@ -192,7 +123,7 @@ h1 {
      width: 0;
     transition: all 2s ease-in-out;
  } 
-}
+} */
 
 
 /* CONTACT  STYLES */
@@ -247,4 +178,14 @@ h1 {
 
   .btn:hover{
     background-color: #008caf;
+  }
+
+  .about-img{
+    border-radius: 50%;
+    height: 18rem;
+    width: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
   }
