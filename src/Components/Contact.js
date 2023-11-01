@@ -16,14 +16,14 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_wiqxfyd', //  service ID
-        'template_hg4xvsh', //  template ID
+        // 'service_wiqxfyd' service_u9u7bnf, //  service ID
+        // 'template_hg4xvsh', //  template ID
         {
-          to_name: 'oumalyons26@gmail.com', //  recipient email
+          to_name: 'oumalyons26@gmail.com' /*nelsonademba32@gmail.com*/, //  recipient email
           from_name: email,
-          message: `Name: ${name}<br/> Phone No: ${phone}<br/> Email: ${email}<br/> Message: ${msg}`,
+          message: `Name: ${name} Phone No: ${phone} Email: ${email} Message: ${msg}`,
         },
-        'GVZj4Ayj3-6vbPyeB' // user ID
+        // 'GVZj4Ayj3-6vbPyeB' // user ID
       )
       .then((response) => {
         console.log('Email sent:', response);
@@ -53,8 +53,8 @@ const Contact = () => {
           <FaLocationDot />
         </p>
         <p>Nakuru, Kenya</p>
-        <p>+254111689847</p>
-        <p>E-mail: adembanelson@gmail.com</p>
+        <p>+254 799 166341</p>
+        <p>E-mail: nelsonademba32@gmail.com</p>
       </div>
       {successMessage && (
         <div style={{color:'yellowgreen'}}>{successMessage}</div>

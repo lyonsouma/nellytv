@@ -8,7 +8,21 @@
     width: 100%;
     height: auto;
     box-shadow: 1px 1px white;
-    z-index: 2; 
+    z-index: 3; 
+}
+
+.navbar-links {
+  position: fixed;
+  margin: 5rem auto; /* Adjust this value as needed */
+  width: 90%;
+  background-color: #932929;
+  z-index: 2; /* Ensure it's above the navbar */
+  display: none; /* Initially hide the links */
+  transition:  1s ease-in-out;
+}
+
+.navbar-links.show {
+  display: block; /* Show the links when the toggle button is clicked */
 }
 .logo{
     height: 60px;
@@ -17,12 +31,13 @@
 .nav-link {
     text-decoration: none;
     color: #00ccff;
-    margin: 7px 30px; /* Added space on the left and right */
+    margin: 7px 30px; 
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    cursor: pointer; /* Change cursor to pointer */
+    cursor: pointer; 
+   
   }
   
   .nav-link::before {
@@ -34,6 +49,7 @@
     bottom: 0;
     left: 0;
     transition: width 0.3s ease;
+    
   }
   
   .nav-link:hover::before {
@@ -184,8 +200,67 @@
     border-radius: 50%;
     height: 18rem;
     width: 18rem;
-    display: flex;
+    display: flex; 
     justify-content: center;
+    align-items: center; 
+     position: relative;
+  }
+
+  .footer-links{
+    font-size: larger;
+    font-weight:bolder;
+    color: black;
+    margin: 0 1em;
+    
+  }
+
+  .footer-container{
+    height: 20vh;
+  }
+  
+
+  /* Add this CSS to create the slanted line */
+  .about-container{
+    display: flex;
+    justify-content: start;
     align-items: center;
+    padding: 22px 0px;
     position: relative;
   }
+
+
+.skewed{
+  width: 100%;
+  display: flex;
+  color: #000000;
+  margin: 2em 0;
+ background: #00ccff;
+  
+}
+.text{
+  padding: 1.5em;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  
+}
+.image{
+  width: 50%;
+  height: 17rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.image::before{
+  content: "";
+  position: absolute;
+  left: -5.4em;
+  top: 50%;
+  transform: translateY(-50%) rotate(20deg);
+  background: #00ccff;
+  width: 20%;
+  height: 140%;
+}
+

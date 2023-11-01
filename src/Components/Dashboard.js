@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import Logo from '../Assets/Images/logoz.png';
 import '../Assets/Styles/Dashboard.css';
 import { Link as ScrollLink } from 'react-scroll';
-import { FaPhoneVolume } from 'react-icons/fa6';
+import { FaPhoneVolume} from 'react-icons/fa6';
 import Contact from './Contact';
 import Service from './Service';
-import lyons from '../Assets/Images/ly.jpg'
+import Footer from './Fotter';
+import About from './About';
+import Test from './Test';
 
 const Dashboard = () => {
-  const [showLinks, setShowLinks] = useState(window.innerWidth >= 992); // Initially show links on larger screens
+  const [showLinks, setShowLinks] = useState(window.innerWidth >= 992); 
+  
 
   const toggleLinks = () => {
     setShowLinks(!showLinks);
@@ -58,9 +61,10 @@ const Dashboard = () => {
                     Contact
                   </ScrollLink>
                 </li>
+               
               </ul>
-              <h6 className="phone-contact">
-                <FaPhoneVolume className="mx-2" />+2 541 116 89 847
+              <h6 className="phone-contact ">
+                <FaPhoneVolume />+254 799 166341
               </h6>
             </div>
           </div>
@@ -85,27 +89,26 @@ const Dashboard = () => {
 </section>
 
 
-        <section id="about-us" className="container-fluid mt-5 bg-light " style={{position: "relative"}}>
-          <div className="row">
-            <h3 className='mt-1 text-info'>About Us</h3>
-            <div className='container col-lg-8 col-md-7 col-sm-6 bg-light'>
-              <p className='mt-5'> 
-              NellyTV Recording, Livestreaming, and Shooting Studio is a state-of-the-art multimedia production facility dedicated to creating high-quality video content. With cutting-edge technology and a team of experienced professionals, NellyTV offers comprehensive services for recording, livestreaming, and shooting. Whether it's capturing live events, producing engaging video content, or broadcasting in real-time, NellyTV Studio is your one-stop destination for all your multimedia needs. Their commitment to excellence and creativity ensures that your vision is brought to life with stunning visuals and audio quality, making them a go-to choice for a wide range of projects, from music videos and corporate events to live broadcasts and much more.
-              </p>
-            </div>
-            <div className='col-lg-4 col-md-3 col-sm-2 bg-light'>
-              <img className='about-img' src={lyons} alt='image' />
-            </div>
-          </div>
+        <section id="about-us" className="container-fluid mt-1 bg-light " style={{position: "relative"}}>
+         <About/>
         </section>
 
-        <section id="service" className="mt-5">
+        <section id="service" className="mt-1">
           <Service/>
         </section>
 
         <section id="contact" className="contact mt-5">
             <Contact/>
         </section>
+
+        <section className="footer mt-5">
+           <Footer/>
+        </section>
+
+        <section>
+        <div className='text-center pb-5'>&copy; {new Date().getFullYear()} Nellytv254. All rights reserved.</div>
+        </section>
+        <Test/>
       </div>
     </div>
   );
