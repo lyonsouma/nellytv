@@ -1,127 +1,125 @@
- body{
-    padding: 0;
-    margin: 0;
-} 
+body {
+  padding: 0;
+  margin: 0;
+}
 
 .nav-container {
-    position: fixed;
-    width: 100%;
-    height: auto;
-    box-shadow: 1px 1px white;
-    z-index: 3; 
+  position: fixed;
+  width: 100%;
+  height: auto;
+  box-shadow: 1px 1px white;
+  z-index: 3;
+  background-color: #ffffff;
 }
 
 .navbar-links {
   position: fixed;
-  margin: 5rem auto; /* Adjust this value as needed */
+  margin: 5rem auto;
   width: 90%;
-  background-color: #932929;
-  z-index: 2; /* Ensure it's above the navbar */
-  display: none; /* Initially hide the links */
-  transition:  1s ease-in-out;
+  z-index: 2;
+  display: none;
+  transition: 1s ease-in-out;
 }
 
 .navbar-links.show {
-  display: block; /* Show the links when the toggle button is clicked */
+  display: block;
 }
-.logo{
-    height: 60px;
-    width: 60px;
+
+.logo {
+  height: 60px;
+  width: 60px;
 }
+
 .nav-link {
-    text-decoration: none;
-    color: #00ccff;
-    margin: 7px 30px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    cursor: pointer; 
-   
-  }
-  
-  .nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #00ccff; /* White line color */
-    bottom: 0;
-    left: 0;
-    transition: width 0.3s ease;
-    
-  }
-  
-  .nav-link:hover::before {
-    width: 100%;
-    transition: width 0.8s ease;
-    color: #ffffff;
-  }
-
-  .home-container {
-    background: url(/src/Assets/Images/Toto.jpg);
-    background-size: cover;  
-    background-repeat: no-repeat;  
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    animation: slide 100s infinite;
-    background-position: 100% center;
-   z-index: 1;
+  text-decoration: none;
+  color: #000;
+  margin: 7px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
 }
 
-.navbar-toggler{
-    background-color: #ffffff;
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #00ccff;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+  transition: width 0.8s ease;
+  color: #00ccff;
+}
+
+.home-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  animation: zoom 50s infinite; /* Use zoom animation */
+  background-position: 100% center;
+  z-index: 1;
+}
+
+.navbar-toggler {
+  background-color: #00ccff;
 }
 
 .home-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 2;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
 }
 
-.main{
-    z-index: 3;
-    position: relative;
-    opacity: 0.7;
+.main {
+  z-index: 3;
+  position: relative;
+  opacity: 0.7;
+}
+
+@keyframes zoom {
+  0% {
+    background-size: 150% 150%;
+    background-image: url(/src/Assets/Images/SS1.jpg);
+  }
+  20% {
+    background-size: 140% 140%;
+    background-image: url(/src/Assets/Images/S3.jpg);
+  }
+  40% {
+    background-size: 130% 130%;
+    background-image: url(/src/Assets/Images/n2.jpg);
+  }
+  60% {
+    background-size: 120% 120%;
+    background-image: url(/src/Assets/Images/n3.jpg);
+  }
+  80% {
+    background-size: 110% 110%;
+    background-image: url(/src/Assets/Images/ttt2.jpg);
+  }
+  100% {
+    background-size: 100% 100%;
+    background-image: url(/src/Assets/Images/Toto.jpg);
+  }
 }
 
 
-/* @keyframes slide {
-     
-    0% {
-        background-position: 0% center;
-        background-image: url(/src/Assets/Images/Toto.jpg);
-       
-    }
-
-    20% {
-        background-position: 0% center;
-        background-image: url(/src/Assets/Images/ttt2.jpg);
-    }
-    40% {
-        background-position: 0% center;
-        background-image: url(/src/Assets/Images/n3.jpg);
-    }
-    60% {
-        background-position: 0% center;
-        background-image: url(/src/Assets/Images/n2.jpg);
-    }
-    80% {
-        background-position: 0% center;
-        background-image: url(/src/Assets/Images/S3.jpg);
-    }
-    100% {
-        background-position: 0% center;
-        background-image: url(/src/Assets/Images/SS1.jpg);
-    }
-} */
-/* h2 {
+ 
+ h2 {
     color: #ffffff;
     font-family: "arial";
     font-size: 1em;
@@ -139,12 +137,12 @@
      width: 0;
     transition: all 2s ease-in-out;
  } 
-} */
+} 
 
 
 /* CONTACT  STYLES */
 .phone-contact{
-    color:#00ccff;
+    color:#000000;
     align-items: center;
 }
 
@@ -180,7 +178,7 @@
   
   .underlined-input {
     border: none;
-    border-bottom: 2px solid #00ccff; 
+    border-bottom: 2px solid #ffffff; 
     background: transparent;
     margin: 10px;
     padding: 5px 0;
@@ -206,61 +204,74 @@
      position: relative;
   }
 
-  .footer-links{
-    font-size: larger;
-    font-weight:bolder;
+
+  .footer-links {
     color: black;
     margin: 0 1em;
-    
-  }
-
-  .footer-container{
-    height: 20vh;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
   }
   
+  .footer-links a {
+    display: flex;
+    color: #0a0c0d;
+    font-size: larger;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center; 
+    margin: 1rem 0;
+    margin-left: 2em;
+  }
+  
+  .footer-links h6 {
+    text-align: center;
+    margin-left: 1em; 
+  }
+
+  .footer-container h5 {
+    margin-left: 2.7em; 
+    margin-top: 1rem;
+    color: #000000; 
+  }
+  .footer-container{
+    background-color: #0a0808;
+  }
+  .contact-footer-links{
+    color: #000000;
+    margin-left: 2.5em;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 2rem;
+  }
 
   /* Add this CSS to create the slanted line */
-  .about-container{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 22px 0px;
+  .about-container {
     position: relative;
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .about-text-container {
+    background: #54d8f9; /* Set the background color */
+    padding: 20px; /* Adjust padding as needed */
+    transform-origin: top right; /* Rotate from the top right corner */
+    position: relative;
+    z-index: 1;
+    
+    color: #ffffff;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%); /* Slant the end */
+  }
+  .about-text{
+    margin-right: 100px;
   }
 
-
-.skewed{
-  width: 100%;
-  display: flex;
-  color: #000000;
-  margin: 2em 0;
- background: #00ccff;
   
-}
-.text{
-  padding: 1.5em;
-  width: 50%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  flex-direction: column;
+  .col-lg-4 {
+    position: relative;
+    z-index: 2;
+  }
   
-}
-.image{
-  width: 50%;
-  height: 17rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.image::before{
-  content: "";
-  position: absolute;
-  left: -5.4em;
-  top: 50%;
-  transform: translateY(-50%) rotate(20deg);
-  background: #00ccff;
-  width: 20%;
-  height: 140%;
-}
-
+  .copyright{
+    background-color:#ffffff;
+  }

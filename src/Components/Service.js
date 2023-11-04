@@ -9,9 +9,9 @@ const Service = () => {
 
     
         <div >
-            <h3 className="mb-5 text-info"><i>Service</i></h3>
-            <h5><i>Photography Services</i></h5>
-            <h6><i>Capturing Moments in Time</i></h6>
+            <h3>Service</h3>
+            <h5>Photography Services</h5>
+            <h6>Capturing Moments in Time</h6>
             <p className="mb-3">
               At Nelly studios, we specialize in capturing the beauty and essence of every moment. Our team of experienced
               photographers will turn your special moments into timeless memories.

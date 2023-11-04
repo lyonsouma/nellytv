@@ -1,62 +1,61 @@
-import React from 'react';
-import Masonry from 'react-responsive-masonry';
-import m8 from '../Assets/Images/n11.jpg';
-import m9 from '../Assets/Images/n12.jpg';
-import m1 from '../Assets/Images/f.jpg';
+import React, { useState } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import m1 from '../Assets/Images/j.png';
+import m2 from '../Assets/Images/Untitled design.png';
+import m3 from '../Assets/Images/j2.png';
+import m4 from '../Assets/Images/DSC_9792x2.jpg';
+import m5 from '../Assets/Images/n.png';
+import { FaArrowLeft, FaArrowRight } from  "react-icons/fa6";
 
-function Gallery() {
-  const images = [m8, m9, m1, m9];
+const Gallery = () => {
+  const [selectedPage, setSelectedPage] = useState(0);
 
- 
+  const handleNext = () => {
+    setSelectedPage((selectedPage + 1) % 3);
+  };
+
+  const handlePrev = () => {
+    setSelectedPage((selectedPage - 1 + 3) % 3);
+  };
+
+  const imagePages = [
+    [m2, m3, m4],
+    [m5, m1, m2],
+    [m2, m3, m4],
+  ];
+
   return (
-    <>
-     
-        <div style={{
-          width: '100%',
-          height: '100vh',
-          background: 'black',
-          position: 'fixed',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          overflow: 'hidden'
-        }}>
+    <div>
+      <Carousel
+        showArrows={false}
+        showThumbs={false}
+        dynamicHeight={false}
+        selectedItem={selectedPage}
+        showStatus={false} // Hide the status bar
+        showIndicators={false} // Hide the indicators
+        showPagination={true} // Show pagination dots
+      >
+        {imagePages.map((page, pageIndex) => (
+          <div key={pageIndex}>
+            <div className="row">
+              {page.map((image, imageIndex) => (
+                <div key={imageIndex} className="col-lg-4 col-md-6 col-sm-12">
+                  <img src={image} style={{ width: '100%', height:'auto'}} alt="" />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </Carousel>
+      <div className="arrow-buttons text-center mt-3" style={{cursor:"pointer", fontSize: '20px'}}>
        
-          <img src={images}  />
-        </div>
+          <FaArrowLeft className='mx-5' onClick={handlePrev}/>
+          <FaArrowRight onClick={handleNext} />
       
-      <div>
-        
-          <Masonry>
-            {images.map((image, i) => (
-              <div
-                key={i}
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  cursor: 'pointer',
-                  height: '60vh',
-                  position: 'relative', 
-                }}
-            
-              >
-                <img
-                  src={image}
-                  style={{
-                    maxWidth: '100%',
-                    maxHeight: '100%',
-                    objectFit: 'contain',
-                    position: 'absolute', 
-                  }}
-                  alt=""
-                />
-              </div>
-            ))}
-          </Masonry>
-    
       </div>
-    </>
+    </div>
   );
-}
+};
 
 export default Gallery;

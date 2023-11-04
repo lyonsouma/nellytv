@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import Logo from '../Assets/Images/logoz.png';
 import '../Assets/Styles/Dashboard.css';
 import { Link as ScrollLink } from 'react-scroll';
-import { FaPhoneVolume} from 'react-icons/fa6';
+import { FaPhoneVolume } from 'react-icons/fa6';
 import Contact from './Contact';
 import Service from './Service';
 import Footer from './Fotter';
 import About from './About';
-import Test from './Test';
+
 
 const Dashboard = () => {
-  const [showLinks, setShowLinks] = useState(window.innerWidth >= 992); 
-  
+  const [showLinks, setShowLinks] = useState(window.innerWidth >= 992);
+
 
   const toggleLinks = () => {
     setShowLinks(!showLinks);
@@ -25,7 +25,7 @@ const Dashboard = () => {
   return (
     <div className="container-fluid">
       <div className="row nav-container">
-        <nav className={`navbar navbar-expand-lg bg-light navbar-light ${showLinks ? 'show' : ''}`}style={{boxShadow:"1px 1px 4px 1px grey"}}>
+        <nav className={`navbar navbar-expand-lg  navbar-light ${showLinks ? 'show' : ''}`} style={{ boxShadow: "1px 1px 4px 1px grey" }}>
           <div className="container">
             <a className="navbar-brand" href="#">
               <img className="logo" src={Logo} alt="Logo" />
@@ -61,54 +61,51 @@ const Dashboard = () => {
                     Contact
                   </ScrollLink>
                 </li>
-               
+
               </ul>
-              <h6 className="phone-contact ">
-                <FaPhoneVolume />+254 799 166341
+              <h6 className="phone-contact">
+                <FaPhoneVolume className='mx-2'/>+254 799 166341
               </h6>
             </div>
           </div>
         </nav>
       </div>
       <div className="row">
-      <section id="home" className="home-container d-flex justify-content-center align-items-center">
-  <div className="container">
-    <div className="row">
-      <div className="col-md-12">
-        <h1 className="text-center text-light main">WELCOME TO Nelly tv</h1>
-      </div>
-    </div>
-    <div className="row">
-      <div className="col-md-12">
-        <p className="text-center text-info">
-          Here we offer: Photography, Videography, Live streaming and more...
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-        <section id="about-us" className="container-fluid mt-1 bg-light " style={{position: "relative"}}>
-         <About/>
+        <section id="home" className="home-container d-flex justify-content-center align-items-center">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <h1 className="text-center text-light main">WELCOME TO Nelly tv</h1>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-12">
+                <p className="text-center text-light">
+                  Here we offer: Photography, Videography, Live streaming and more...
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section id="service" className="mt-1">
-          <Service/>
+
+        <section id="about-us" className="container-fluid mt-5 bg-light " style={{ position: "relative" }}>
+          <About />
         </section>
 
-        <section id="contact" className="contact mt-5">
-            <Contact/>
+        <section id="service" className="mt-1 bg-light">
+          <Service />
         </section>
 
-        <section className="footer mt-5">
-           <Footer/>
+        <section id="contact" className="contact mt-1">
+          <Contact />
         </section>
 
-        <section>
-        <div className='text-center pb-5'>&copy; {new Date().getFullYear()} Nellytv254. All rights reserved.</div>
+        <section className="footer mt-1">
+          <Footer />
         </section>
-        <Test/>
+
+  
       </div>
     </div>
   );
