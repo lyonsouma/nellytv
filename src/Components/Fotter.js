@@ -47,9 +47,13 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <section className='bg-dark '>
+      <hr className='bg-info '/>
+      </section>
       <section>
+      
         <div className='bg-light row copyright'>
-          <div className='text-center text-dark mt-3 mb-3'>&copy; {new Date().getFullYear()} Nellytv254. All rights reserved.</div>
+          <div className='text-center text-dark  mb-3'>&copy; {new Date().getFullYear()} Nellytv254. All rights reserved.</div>
         </div>
       </section>
     </div>

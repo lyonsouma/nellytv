@@ -41,7 +41,7 @@ const Gallery = () => {
             <div className="row">
               {page.map((image, imageIndex) => (
                 <div key={imageIndex} className="col-lg-4 col-md-6 col-sm-12">
-                  <img src={image} style={{ width: '100%', height:'auto'}} alt="" />
+                  <img src={image} style={{ width: '100%', height:'auto', paddingTop: '10px'}} alt="" />
                 </div>
               ))}
             </div>

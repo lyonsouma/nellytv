@@ -80,8 +80,8 @@ const Dashboard = () => {
             </div>
             <div className="row">
               <div className="col-md-12">
-                <p className="text-center text-light">
-                  Here we offer: Photography, Videography, Live streaming and more...
+                <p className="text-center text-info main">
+                  At NellyTv we offer Photography, Videography, Live streaming and more...
                 </p>
               </div>
             </div>

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import vid1 from '../Assets/Videos/nelson.mp4';
 import vid from '../Assets/Videos/nn.mp4';
 import vid2 from '../Assets/Videos/vid2.mp4';
 import vid3 from '../Assets/Videos/vid3.mp4';
+import vid4 from '../Assets/Videos/Ngata.mp4';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const Video = () => {
@@ -18,8 +20,8 @@ const Video = () => {
   };
 
   const videoPages = [
-    [vid, vid3, vid2],
-    [vid3, vid, vid2],
+    [vid, vid1, vid4],
+    [vid3, vid3, vid2],
     [vid, vid3, vid2],
   ];
 
