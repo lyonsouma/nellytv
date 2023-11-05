@@ -3,6 +3,33 @@ body {
   margin: 0;
 }
 
+.home-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  animation: zoom 100s infinite;
+  background-position: 100% center;
+  z-index: 1;
+}
+
+.home-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+}
+
 .nav-container {
   position: fixed;
   width: 100%;
@@ -23,11 +50,6 @@ body {
 
 .navbar-links.show {
   display: block;
-}
-
-.logo {
-  height: 60px;
-  width: 60px;
 }
 
 .nav-link {
@@ -58,30 +80,8 @@ body {
   color: #00ccff;
 }
 
-.home-container {
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  animation: zoom 100s infinite; /* Use zoom animation */
-  background-position: 100% center;
-  z-index: 1;
-}
-
 .navbar-toggler {
   background-color: #00ccff;
-}
-
-.home-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 2;
 }
 
 .main {
@@ -115,28 +115,41 @@ body {
     background-image: url(/src/Assets/Images/musiclogo.avif);
   }
 }
-
-
  
- h2 {
-    color: #ffffff;
-    font-family: "arial";
-    font-size: 1em;
-    margin: 10px 0 0 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%;
-    animation: animtext 4s steps(80, end);
-    transition: all cubic-bezier(0.1, 0.7, 1.0, 0.1);
-    z-index: 3;
-  }
-  
 @keyframes animtext { 
  from {
      width: 0;
     transition: all 2s ease-in-out;
  } 
-} 
+}
+/* ABOUT  STYLES */ 
+.about-img{
+  border-radius: 50%;
+  height: 18rem;
+  width: 18rem;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+   position: relative;
+}
+
+  .about-container {
+    position: relative;
+    overflow: hidden; 
+  }
+  
+  .about-text-container {
+    background: #54d8f9; 
+    padding: 20px; 
+    transform-origin: top right; 
+    position: relative;
+    z-index: 1;
+    color: #060606;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%); 
+  }
+  .about-text{
+    margin-right: 100px;
+  }
 
 
 /* CONTACT  STYLES */
@@ -175,6 +188,20 @@ body {
     font-family: 'Times New Roman', Times, serif;
   }
   
+  .contact-footer-links{
+    color: #000000;
+    margin-left: 2.5em;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 2rem;
+  }
+  
+  .col-lg-4 {
+    position: relative;
+    z-index: 2;
+  }
+  
   .underlined-input {
     border: none;
     border-bottom: 2px solid #ffffff; 
@@ -186,24 +213,13 @@ body {
   }
 
   .btn {
-    background-color: #00ccff;
+    background-color: #ffffff;
   }
 
   .btn:hover{
-    background-color: #008caf;
+    background-color: #00ccff;
   }
-
-  .about-img{
-    border-radius: 50%;
-    height: 18rem;
-    width: 18rem;
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-     position: relative;
-  }
-
-
+/* FOOTER  STYLES */
   .footer-links {
     color: black;
     margin: 0 1em;
@@ -236,41 +252,7 @@ body {
   .footer-container{
     background-color: #0a0808;
   }
-  .contact-footer-links{
-    color: #000000;
-    margin-left: 2.5em;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    margin: 2rem;
-  }
-
-  /* Add this CSS to create the slanted line */
-  .about-container {
-    position: relative;
-    overflow: hidden; /* Hide overflow */
-  }
-  
-  .about-text-container {
-    background: #54d8f9; /* Set the background color */
-    padding: 20px; /* Adjust padding as needed */
-    transform-origin: top right; /* Rotate from the top right corner */
-    position: relative;
-    z-index: 1;
-    
-    color: #ffffff;
-    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%); /* Slant the end */
-  }
-  .about-text{
-    margin-right: 100px;
-  }
-
-  
-  .col-lg-4 {
-    position: relative;
-    z-index: 2;
-  }
-  
   .copyright{
     background-color:#ffffff;
   }
+  

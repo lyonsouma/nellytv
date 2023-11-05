@@ -6,6 +6,10 @@ import m2 from '../Assets/Images/Untitled design.png';
 import m3 from '../Assets/Images/j2.png';
 import m4 from '../Assets/Images/DSC_9792x2.jpg';
 import m5 from '../Assets/Images/n.png';
+import m6 from '../Assets/Images/pic1.png';
+import m7 from '../Assets/Images/pic2.png';
+import m8 from '../Assets/Images/pic3.png';
+import m9 from '../Assets/Images/pic4.png';
 import { FaArrowLeft, FaArrowRight } from  "react-icons/fa6";
 
 const Gallery = () => {
@@ -20,9 +24,9 @@ const Gallery = () => {
   };
 
   const imagePages = [
-    [m2, m3, m4],
-    [m5, m1, m2],
-    [m2, m3, m4],
+    [m8, m2, m6],
+    [m4, m5, m3],
+    [m7,m1 ,m9],
   ];
 
   return (

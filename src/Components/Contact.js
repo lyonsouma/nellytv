@@ -16,14 +16,14 @@ const Contact = () => {
 
     emailjs
       .send(
-        // 'service_wiqxfyd' service_u9u7bnf, //  service ID
-        // 'template_hg4xvsh', //  template ID
+        'service_wiqxfyd' ,//service_u9u7bnf, //  service ID
+         'template_hg4xvsh', //  template ID
         {
           to_name: 'oumalyons26@gmail.com' /*nelsonademba32@gmail.com*/, //  recipient email
           from_name: email,
-          message: `Name: ${name} Phone No: ${phone} Email: ${email} Message: ${msg}`,
+          message: `Name: ${name}\nPhone No: ${phone}\nEmail: ${email}\nMessage: ${msg}`,
         },
-        // 'GVZj4Ayj3-6vbPyeB' // user ID
+        'GVZj4Ayj3-6vbPyeB' // user ID
       )
       .then((response) => {
         console.log('Email sent:', response);

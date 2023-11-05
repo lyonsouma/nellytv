@@ -12,7 +12,7 @@ const Service = () => {
             <h5>Photography Services</h5>
             <h6>Capturing Moments in Time</h6>
             <p className="mb-3">
-              At Nelly studios, we specialize in capturing the beauty and essence of every moment. Our team of experienced
+              At Nelly studios, we specialize in capturing the beauty and essence of every moment. Our<br/> team of experienced
               photographers will turn your special moments into timeless memories.
             </p>
             <Gallery />
@@ -20,8 +20,8 @@ const Service = () => {
             <h5>Video Shooting & Live Streaming Services</h5>
             <h6>Real-Time Engagement and Entertainment</h6>
             <p>
-              Elevate your events with our live streaming services. Whether it's a corporate webinar, a music concert, or a
-              special occasion, we provide professional live streaming solutions to engage your audience in real-time.
+              Elevate your events with our live streaming services. Whether it's a corporate webinar,<br/> a music concert, or a
+              special occasion, we provide professional live streaming solutions<br/> to engage your audience in real-time.
             </p>
             <p>
               Lights, camera, and action – our video shooting services cover it all. We're here to bring your ideas to life
