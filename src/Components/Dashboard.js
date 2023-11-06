@@ -63,8 +63,8 @@ const Dashboard = () => {
                 </li>
 
               </ul>
-              <h6 className="phone-contact">
-                <FaPhoneVolume className='mx-2'/>+254 799 166341
+              <h6 className="phone-contact text-center">
+                <FaPhoneVolume className='mx-2 text-center'/>+254 799 166341
               </h6>
             </div>
           </div>

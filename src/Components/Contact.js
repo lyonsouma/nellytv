@@ -103,12 +103,13 @@ const Contact = () => {
               required={true}
             ></textarea>
           </div>
-        </div>
-        <div className="text-center mt-3">
+          <div className="text-center ">
           <button type="submit" className="btn mb-5">
             Send
           </button>
         </div>
+        </div>
+
       </form>
 
      

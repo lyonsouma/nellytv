@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Assets/Styles/Dashboard.css';
-import Nelly from '../Assets/Images/nelly.png';
+import Nelly from '../Assets/Images/n.png';
 
 const About = () => {
   return (
